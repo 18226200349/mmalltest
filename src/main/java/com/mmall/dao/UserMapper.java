@@ -3,7 +3,14 @@ package com.mmall.dao;
 import org.apache.ibatis.annotations.Param;
 
 import com.mmall.pojo.User;
-
+/**
+ * usermapper实体类
+* @ClassName: UserMapper  
+* @Description: TODO  
+* @author Administrator  
+* @date 2018年4月11日  
+*
+ */
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
