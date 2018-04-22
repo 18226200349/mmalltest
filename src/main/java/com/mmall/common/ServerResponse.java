@@ -40,6 +40,7 @@ public class ServerResponse<T> implements Serializable {
 	 */
     @JsonIgnore
 	public boolean isSuccess() {
+    	//此处this.status默认返回0
 		return this.status == ResponseCode.SUCCESS.getCode();
 	}
 
