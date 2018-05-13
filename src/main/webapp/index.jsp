@@ -1,7 +1,6 @@
 <%@ page language="java"  contentType="text/html; charset=UTF-8" %>
 
 <html>
-<head> <link rel="shortcut icon" href="#" /></head>
 <body>
 <h2>Hello World!</h2>
 

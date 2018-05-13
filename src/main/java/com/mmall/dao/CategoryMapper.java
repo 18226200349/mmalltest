@@ -1,8 +1,8 @@
 package com.mmall.dao;
 
-import com.mmall.pojo.Category;
-
 import java.util.List;
+
+import com.mmall.pojo.Category;
 
 public interface CategoryMapper {
     int deleteByPrimaryKey(Integer id);
@@ -18,6 +18,4 @@ public interface CategoryMapper {
     int updateByPrimaryKey(Category record);
     
     List<Category> selectCategoryChildrenByParentId(Integer parentId);
-
-
 }
