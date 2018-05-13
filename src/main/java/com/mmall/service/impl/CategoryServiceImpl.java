@@ -1,20 +1,19 @@
 package com.mmall.service.impl;
 
-import java.util.List;
-import java.util.Set;
-
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.mmall.common.ServerResponse;
 import com.mmall.dao.CategoryMapper;
 import com.mmall.pojo.Category;
 import com.mmall.service.ICategoryService;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Set;
 
 @Service("iCategoryService")
 public class CategoryServiceImpl implements ICategoryService {
@@ -66,7 +65,7 @@ public class CategoryServiceImpl implements ICategoryService {
 	 * @Title: 递归查询子节点和孩子节点的Id @Description: TODO @param @param
 	 * categoryId @param @return @return ServerResponse @throws
 	 */
-	public ServerResponse selectCategoryAndChildrenById(Integer categoryId) {
+	public ServerResponse<List<Integer>>selectCategoryAndChildrenById(Integer categoryId) {
 		// guava缓存中读取的初始化集合
 		Set<Category> categorySet = Sets.newHashSet();
 		findChildCategory(categorySet, categoryId);
